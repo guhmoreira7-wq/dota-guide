@@ -42,6 +42,11 @@
             background-color: #334155;
         }
 
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
         .card h3 {
             color: #a78bfa;
         }
@@ -49,6 +54,16 @@
         .role {
             font-size: 12px;
             color: #94a3b8;
+        }
+
+        .build {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .build span {
+            display: block;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -65,27 +80,55 @@
     <div class="heroes">
 
         <div class="card">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_assassin.png">
             <h3>Phantom Assassin</h3>
             <p class="role">Late Game Carry</p>
             <p>Focus on farming fast and hitting strong late-game spikes.</p>
+
+            <div class="build">
+                <span><b>Early:</b> Battle Fury</span>
+                <span><b>Mid:</b> Desolator, BKB</span>
+                <span><b>Late:</b> Satanic, Abyssal Blade</span>
+            </div>
         </div>
 
         <div class="card">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/juggernaut.png">
             <h3>Juggernaut</h3>
             <p class="role">Balanced Carry</p>
             <p>Strong in all phases with healing and powerful ultimate.</p>
+
+            <div class="build">
+                <span><b>Early:</b> Phase Boots, Maelstrom</span>
+                <span><b>Mid:</b> Manta Style, Aghanim</span>
+                <span><b>Late:</b> Butterfly, Swift Blink</span>
+            </div>
         </div>
 
         <div class="card">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/faceless_void.png">
             <h3>Faceless Void</h3>
             <p class="role">Teamfight Carry</p>
             <p>Use Chronosphere wisely to control fights and win games.</p>
+
+            <div class="build">
+                <span><b>Early:</b> Power Treads, Mask of Madness</span>
+                <span><b>Mid:</b> Maelstrom, BKB</span>
+                <span><b>Late:</b> Mjollnir, Satanic</span>
+            </div>
         </div>
 
         <div class="card">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/terrorblade.png">
             <h3>Terrorblade</h3>
             <p class="role">Hyper Carry</p>
             <p>Extremely strong late game with illusions and map pressure.</p>
+
+            <div class="build">
+                <span><b>Early:</b> Power Treads, Dragon Lance</span>
+                <span><b>Mid:</b> Manta Style, Skadi</span>
+                <span><b>Late:</b> Butterfly, Satanic</span>
+            </div>
         </div>
 
     </div>
