@@ -1,138 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dota 2 Carry Guide</title>
+<meta charset="UTF-8">
+<title>Dota Guide</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: #ffffff;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+}
 
-        header {
-            background: linear-gradient(90deg, #7c3aed, #9333ea);
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-        }
+header {
+    background: linear-gradient(90deg, #7c3aed, #9333ea);
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-        .container {
-            padding: 20px;
-        }
+.container {
+    padding: 20px;
+}
 
-        .heroes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.filter {
+    margin-bottom: 20px;
+}
 
-        .card {
-            background-color: #1e293b;
-            border-radius: 12px;
-            padding: 15px;
-            transition: 0.3s;
-        }
+button {
+    background: #7c3aed;
+    border: none;
+    padding: 10px;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-            background-color: #334155;
-        }
+.heroes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
+.card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        .card h3 {
-            color: #a78bfa;
-        }
+.card:hover {
+    transform: scale(1.05);
+    background-color: #334155;
+}
 
-        .role {
-            font-size: 12px;
-            color: #94a3b8;
-        }
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
 
-        .build {
-            font-size: 13px;
-            margin-top: 10px;
-        }
+.card h3 {
+    color: #a78bfa;
+}
 
-        .build span {
-            display: block;
-            margin-top: 5px;
-        }
-    </style>
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background: #1e293b;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 12px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
-    Dota 2 Carry Guide
-</header>
+<header>Dota 2 Carry Guide</header>
 
 <div class="container">
-    <h2>🔥 Meta Carries</h2>
 
-    <div class="heroes">
-
-        <div class="card">
-            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_assassin.png">
-            <h3>Phantom Assassin</h3>
-            <p class="role">Late Game Carry</p>
-            <p>Focus on farming fast and hitting strong late-game spikes.</p>
-
-            <div class="build">
-                <span><b>Early:</b> Battle Fury</span>
-                <span><b>Mid:</b> Desolator, BKB</span>
-                <span><b>Late:</b> Satanic, Abyssal Blade</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/juggernaut.png">
-            <h3>Juggernaut</h3>
-            <p class="role">Balanced Carry</p>
-            <p>Strong in all phases with healing and powerful ultimate.</p>
-
-            <div class="build">
-                <span><b>Early:</b> Phase Boots, Maelstrom</span>
-                <span><b>Mid:</b> Manta Style, Aghanim</span>
-                <span><b>Late:</b> Butterfly, Swift Blink</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/faceless_void.png">
-            <h3>Faceless Void</h3>
-            <p class="role">Teamfight Carry</p>
-            <p>Use Chronosphere wisely to control fights and win games.</p>
-
-            <div class="build">
-                <span><b>Early:</b> Power Treads, Mask of Madness</span>
-                <span><b>Mid:</b> Maelstrom, BKB</span>
-                <span><b>Late:</b> Mjollnir, Satanic</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/terrorblade.png">
-            <h3>Terrorblade</h3>
-            <p class="role">Hyper Carry</p>
-            <p>Extremely strong late game with illusions and map pressure.</p>
-
-            <div class="build">
-                <span><b>Early:</b> Power Treads, Dragon Lance</span>
-                <span><b>Mid:</b> Manta Style, Skadi</span>
-                <span><b>Late:</b> Butterfly, Satanic</span>
-            </div>
-        </div>
-
-    </div>
+<div class="filter">
+    <button onclick="filterHeroes('all')">All</button>
+    <button onclick="filterHeroes('carry')">Carry</button>
 </div>
+
+<div class="heroes" id="heroList">
+
+<div class="card carry" onclick="openHero('pa')">
+<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_assassin.png">
+<h3>Phantom Assassin</h3>
+</div>
+
+<div class="card carry" onclick="openHero('jugg')">
+<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/juggernaut.png">
+<h3>Juggernaut</h3>
+</div>
+
+<div class="card carry" onclick="openHero('void')">
+<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/faceless_void.png">
+<h3>Faceless Void</h3>
+</div>
+
+<div class="card carry" onclick="openHero('tb')">
+<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/terrorblade.png">
+<h3>Terrorblade</h3>
+</div>
+
+</div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">X</span>
+
+<h2 id="heroName"></h2>
+<p id="heroDesc"></p>
+
+<h3>When to pick</h3>
+<p id="heroWhen"></p>
+
+<h3>Build</h3>
+<p id="heroBuild"></p>
+
+</div>
+</div>
+
+<script>
+const heroes = {
+    pa: {
+        name: "Phantom Assassin",
+        desc: "High burst damage carry.",
+        when: "Good against squishy heroes.",
+        build: "Early: Battle Fury | Mid: Desolator, BKB | Late: Satanic, Abyssal"
+    },
+    jugg: {
+        name: "Juggernaut",
+        desc: "Balanced carry with sustain.",
+        when: "Safe pick in most games.",
+        build: "Early: Maelstrom | Mid: Manta | Late: Butterfly"
+    },
+    void: {
+        name: "Faceless Void",
+        desc: "Teamfight control carry.",
+        when: "Great with AoE teammates.",
+        build: "Early: MoM | Mid: Maelstrom, BKB | Late: Mjollnir"
+    },
+    tb: {
+        name: "Terrorblade",
+        desc: "Strong illusion carry.",
+        when: "Good for split push.",
+        build: "Early: Dragon Lance | Mid: Manta, Skadi | Late: Butterfly"
+    }
+};
+
+function openHero(hero) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("heroName").innerText = heroes[hero].name;
+    document.getElementById("heroDesc").innerText = heroes[hero].desc;
+    document.getElementById("heroWhen").innerText = heroes[hero].when;
+    document.getElementById("heroBuild").innerText = heroes[hero].build;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+function filterHeroes(role) {
+    let cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        if (role === "all" || card.classList.contains(role)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
 
 </body>
 </html>
